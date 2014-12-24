@@ -53,6 +53,7 @@ bindsym $mod+p exec dmenu_run
 new_window 1pixel
 new_float none
 for_window [class="^.*"] border none
+for_window [class="Wine"] floating enable
 
 # change focus
 bindsym $mod+j focus left
@@ -175,6 +176,7 @@ font xft:Terminus 9
 #Keys to run apps
 bindsym $mod+c exec chromium
 bindsym $mod+g exec gvim
+bindsym $mod+t exec thunar
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
