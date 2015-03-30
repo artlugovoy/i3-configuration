@@ -9,6 +9,7 @@ setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,ru
 xrdb ~/.Xresources &
 feh --bg-fill ~/.i3/resources/images/bg.jpg &
 xcompmgr -n &
-thunar --daemon &
+udiskie -2 &
 xfce4-notifyd &
-exec i3
+exec dbus-launch --exit-with-session --sh-syntax i3 &
+thunar --daemon

@@ -98,7 +98,7 @@ urxvt*cursorColor:        #ffcc00
 !enable pseudo-transparency (requires depth: 24 (see above))
 urxvt*inheritPixmap:      true
 !delimiters for double-click mouse selection
-urxvt*cutchars:           "()*,<>[]{}|'
+!urxvt*cutchars:           "()*,<>[]{}|'
 !screen dump settings
 urxvt*print-pipe:         cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 !secondary screen scroll (default enabled)
