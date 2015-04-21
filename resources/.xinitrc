@@ -11,5 +11,4 @@ feh --bg-fill ~/.i3/resources/images/bg.jpg &
 xcompmgr -n &
 udiskie -2 &
 xfce4-notifyd &
-exec dbus-launch --exit-with-session --sh-syntax i3 &
-thunar --daemon
+exec dbus-launch --exit-with-session --sh-syntax i3
