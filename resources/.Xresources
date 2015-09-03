@@ -45,7 +45,7 @@ Xft.hintstyle:  hintfull
 ! xterm ----------------------------------------------------------------------
 
 xterm.geometry:           80x25
-xterm.faceName:           terminus:pixelsize=14
+xterm.faceName:           terminus:pixelsize=8
 !xterm*font:             -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm.dynamicColors:      true
 xterm.utf8:               2
@@ -62,7 +62,7 @@ xterm.toolBar:            false
 ! rxvt-unicode ---------------------------------------------------------------
 
 ! font preference
-URxvt.font: xft:terminus:pixelsize=14:autohint=true:antialias=true
+URxvt.font: xft:terminus:pixelsize=8:autohint=true:antialias=true
 !urxvt*font:       -*-terminus-medium-r-normal-*-10-*-*-*-*-*-*
 !urxvt*boldFont:  -*-terminus-medium-r-normal-*-10-*-*-*-*-*-*
 !initial size

@@ -10,5 +10,6 @@ xrdb ~/.Xresources &
 feh --bg-fill ~/.i3/resources/images/bg.jpg &
 xcompmgr -n &
 udiskie -2 &
-xfce4-notifyd &
+#xfce4-notifyd &
+/etc/off-gaming &
 exec dbus-launch --exit-with-session --sh-syntax i3
