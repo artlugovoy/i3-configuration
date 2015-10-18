@@ -13,3 +13,6 @@ udiskie -2 &
 #xfce4-notifyd &
 /etc/off-gaming &
 exec dbus-launch --exit-with-session --sh-syntax i3
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
