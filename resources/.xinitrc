@@ -12,6 +12,7 @@ xcompmgr -n &
 udiskie -2 &
 #xfce4-notifyd &
 /etc/off-gaming &
+xautolock -time 5 -locker "i3lock-fancy" -detectsleep &
 exec dbus-launch --exit-with-session --sh-syntax i3
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
