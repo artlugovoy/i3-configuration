@@ -115,5 +115,8 @@ urxvt*matcher.button:     1
 !! END urlLauncher settings?!!
 URxvt*termName: rxvt
 
+URxvt.transparent:   true
+URxvt.shading:       20
+
 transparent=0000 opaque=ffff
 urxvt*background: rgba:1111/1111/1111/dddd

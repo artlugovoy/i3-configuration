@@ -7,8 +7,8 @@ xset fp rehash
 xsetroot -cursor_name left_ptr
 setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,ru
 xrdb ~/.Xresources &
-feh --bg-fill ~/.i3/resources/images/bg.jpg &
-xcompmgr -n &
+feh --bg-scale '~/.i3/resources/images/bg.jpg' --bg-scale '~/.i3/resources/bg2.jpg' &
+compton --config ~/.i3/resources/.compton.conf &
 udiskie -2 &
 #xfce4-notifyd &
 /etc/off-gaming &

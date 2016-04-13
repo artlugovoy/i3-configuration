@@ -170,6 +170,11 @@ bindsym XF86AudioStop exec ncmpcpp stop
 bindsym XF86AudioPrev exec ncmpcpp prev
 bindsym XF86AudioNext exec ncmpcpp next
 
+bindsym $mod+Ctrl+F7 exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym $mod+Ctrl+F8 exec --no-startup-id pactl set-sink-volume 0 +5% 
+
+bindsym $mod+Ctrl+F12 exec --no-startup-id pactl set-sink-mute 0 toggle
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
