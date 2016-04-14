@@ -173,6 +173,10 @@ bindsym XF86AudioNext exec ncmpcpp next
 bindsym $mod+Ctrl+F7 exec --no-startup-id pactl set-sink-volume 0 -5% 
 bindsym $mod+Ctrl+F8 exec --no-startup-id pactl set-sink-volume 0 +5% 
 
+bindsym $mod+Ctrl+F9 exec mpc next
+bindsym $mod+Ctrl+F10 exec mpc prev
+bindsym $mod+Ctrl+F11 exec mpc toggle
+
 bindsym $mod+Ctrl+F12 exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Sreen brightness controls
