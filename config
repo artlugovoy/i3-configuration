@@ -200,6 +200,7 @@ bindsym $mod+t exec pcmanfm
 
 bar {
   #	mode hide
+  tray_output primary
   position top
   #	modifier $barMod
   # icon font
