@@ -37,7 +37,8 @@ client.urgent           #E9E9E9 #FF4020 #bbbbbb #FFFF00
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec sakura
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -187,7 +188,7 @@ font xft:Terminus 9
 
 #Keys to run apps
 bindsym $mod+c exec chromium
-bindsym $mod+g exec gvim
+bindsym $mod+g exec sakura -e vim
 bindsym $mod+t exec pcmanfm
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -200,7 +201,6 @@ bindsym $mod+t exec pcmanfm
 
 bar {
   #	mode hide
-  tray_output primary
   position top
   #	modifier $barMod
   # icon font
