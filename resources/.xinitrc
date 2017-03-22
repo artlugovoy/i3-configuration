@@ -6,7 +6,7 @@ xset +fp /usr/share/fonts/artwiz-fonts
 xset fp rehash
 xsetroot -cursor_name left_ptr
 setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,ru
-xrdb ~/.Xresources &
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources &
 feh --bg-scale '/home/arthur/.i3/resources/images/bg.jpg' --bg-scale '/home/arthur/.i3/resources/bg2.jpg' &
 compton --config /home/arthur/.i3/resources/.compton.conf &
 udiskie -2 &

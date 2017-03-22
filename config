@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Terminus 8
+font pango:Terminus (TTF) 10
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -44,7 +44,7 @@ bindsym $mod+Shift+Return exec sakura
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run -fn 'terminus-12' -nb '#E9E9E9' -nf '#648ECE'
+bindsym $mod+p exec dmenu_run -fn 'Terminus (TTF):pixelsize=14' -nb '#E9E9E9' -nf '#648ECE'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktofile. It is a wrapper around dmenu, so you need that
 # installed.
@@ -184,8 +184,6 @@ bindsym $mod+Ctrl+F12 exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-font xft:Terminus 9
-
 #Keys to run apps
 bindsym $mod+c exec chromium
 bindsym $mod+g exec sakura -e vim
@@ -204,7 +202,7 @@ bar {
   position top
   #	modifier $barMod
   # icon font
-  font pango:Terminus, Icons 8
+  font xft:Terminus (TTF) 9
   status_command i3blocks -c ~/.i3/i3blocks.conf
   colors {
     background #E9E9E9
