@@ -10,8 +10,8 @@ setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,ru
 feh --bg-scale '/home/arthur/.i3/resources/images/bg.jpg' --bg-scale '/home/arthur/.i3/resources/bg2.jpg' &
 compton --config /home/arthur/.i3/resources/.compton.conf &
 udiskie -2 &
-#xfce4-notifyd &
-/etc/off-gaming &
+xfce4-notifyd &
+lightscreen &
 xautolock -time 5 -locker "i3lock-fancy" -detectsleep &
 (sleep 10; conky -c ~/.i3/conky/desktop.conf -q) &
 exec dbus-launch --exit-with-session --sh-syntax i3
