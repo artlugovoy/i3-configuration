@@ -7,11 +7,10 @@ xset fp rehash
 xsetroot -cursor_name left_ptr
 setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,ru
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources &
-feh --bg-scale '/home/arthur/.i3/resources/images/bg.jpg' --bg-scale '/home/arthur/.i3/resources/bg2.jpg' &
+feh --bg-scale '/home/arthur/.i3/resources/images/bg.png' &
 compton --config /home/arthur/.i3/resources/.compton.conf &
 udiskie -2 &
-xfce4-notifyd &
-lightscreen &
+dunst &
 xautolock -time 5 -locker "i3lock-fancy" -detectsleep &
 (sleep 10; conky -c ~/.i3/conky/desktop.conf -q) &
 exec dbus-launch --exit-with-session --sh-syntax i3
