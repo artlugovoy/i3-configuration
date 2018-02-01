@@ -174,7 +174,7 @@ bindsym $mod+c exec chromium
 bindsym $mod+g exec sakura -e vim
 bindsym $mod+t exec pcmanfm
 
-exec_always --no-startup-id $HOME/.i3/.polybar.sh
+exec_always --no-startup-id $HOME/.i3/polybar/runner.sh
 
 # System Commands
 set $Locker i3lock-fancy && sleep 1

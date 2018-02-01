@@ -1,0 +1,372 @@
+[colors]
+background = #eee
+foreground = #6C6766
+linecolor = #6C6766
+bordercolor = #eee
+accent = #216C9C
+
+[bar/top]
+enable-ipc = true
+width = 100%
+height = 18
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+
+line-color = ${colors.linecolor}
+separator = "  |   "
+underline-size = 1
+overline-size = 2
+
+;border-size = 5
+;border-color = 0
+;border-bottom-size = 0
+border-bottom-size = 0
+border-bottom-color = ${colors.bordercolor}
+
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "FontAwesome:pixelsize=8;0"
+font-1 = "Terminus (TTF):pixelsize=9;style=Bold;1"
+font-2 = "Terminus:size=8;1
+
+modules-left =  i3
+modules-center = xwindow
+modules-right = mpd xkeyboard volume powermenu date
+
+tray-position = right
+tray-padding = 3
+tray-maxsize = 16
+;tray-transparent = true
+;tray-detached = true
+;tray-offset-x = 50
+
+;dim-value = 0.2
+
+;click-left =
+;click-middle =
+;click-right =
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+double-click-left = notify-send -u low doubleclick
+double-click-right = notify-send -u low doubleclick2
+
+# bar/module specific vars
+bspwm-focused-overline = ${colors.linecolor}
+bspwm-focused-underline = #cc333333
+
+[module/xwindow]
+type = internal/xwindow
+format = <label>
+label-maxlen = 75
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+blacklist-0 = num lock
+
+format-prefix = %{F#1F5AE}
+format-prefix-foreground = #666
+
+label-layout =   %layout%
+
+label-indicator-padding = 2
+label-indicator-background = ${colors.accent}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground}
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-scroll = false
+
+format = <label-state> <label-mode>
+;format = <label-monitor> <label-state> <label-mode>
+;pin-workspaces = false
+
+;ws-icon-0 = term;
+;ws-icon-1 = web;
+;ws-icon-2 = code;
+;ws-icon-3 = music;
+;ws-icon-4 = irssi;
+;ws-icon-default = 
+ws-icon-default = x
+
+inline-mode = true
+
+;label-focused = %icon%
+label-focused = o
+label-focused-background = #165D8A
+label-focused-foreground = #fff
+label-focused-overline = ${root.bspwm-focused-overline}
+label-focused-underline = ${root.bspwm-focused-underline}
+label-focused-padding = 2
+
+label-focused-occupied = %{O-1}⏺%{O-1}
+label-focused-occupied-background = ${self.label-focused-background}
+label-focused-occupied-foreground = ${self.label-focused-foreground}
+label-focused-occupied-overline = ${self.label-focused-overline}
+label-focused-occupied-underline = ${self.label-focused-underline}
+label-focused-occupied-padding = ${self.label-focused-padding}
+
+;label-occupied = %icon%
+label-occupied = %{O-1}⏺%{O-1}
+label-occupied-padding = 2
+
+;label-urgent = %icon%
+label-urgent = !
+label-urgent-background = #bd2c40
+label-urgent-padding = 2
+
+;label-empty = %icon%
+label-empty = x
+label-empty-foreground = #444
+label-empty-padding = 2
+
+label-monocle = 
+label-monocle-padding = 2
+label-monocle-background = #171717
+label-monocle-foreground = ${colors.accent}
+
+label-floating = 
+label-floating-padding = 2
+label-floating-background = #171717
+label-floating-foreground = ${colors.accent}
+
+label-locked = locked
+label-locked-padding = 1
+label-sticky = sticky
+label-sticky-padding = 1
+label-private = private
+label-private-padding = 1
+;label-pseudotiled = pseudo
+;label-pseudotiled-padding = 2
+;label-pseudotiled-background = #f09
+;label-tiled = tiled
+;label-tiled-padding = 2
+;label-tiled-background = #f90
+
+label-dimmed-background = ${root.background}
+label-dimmed-overline = ${root.background}
+label-dimmed-underline = ${root.background}
+label-dimmed-active-foreground = #f00
+
+[module/i3]
+type = internal/i3
+index-sort = true
+pin-workspaces = true
+wrapping-scroll = true
+;reverse-scroll = false
+;enable-scroll = false
+
+format = <label-state> <label-mode>
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.accent}
+
+label-focused = %index%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-foreground = ${module/bspwm.label-focused-foreground}
+;label-focused-overline= ${module/bspwm.label-focused-overline}
+;label-focused-underline= ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+label-unfocused = %index%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+
+label-urgent = %index%!
+label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+label-visible = %index%
+label-visible-padding = ${module/bspwm.label-empty-padding}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix =  
+format-prefix-foreground = ${colors.foreground}
+format-underline = #f90000
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+label = %percentage_used%%
+format-prefix = ""
+format-prefix-foreground = #666
+
+[module/wlan]
+type = internal/network
+interface = net1
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground}
+
+[module/eth]
+type = internal/network
+interface = enp5s0
+interval = 3.0
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = #666
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+label-separator = |
+label-separator-margin = 3
+type = internal/date
+label =  %time%
+date = %Y-%m-%d
+time = %H:%M
+interval = 5
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = "  "
+format-muted-foreground = ${colors.foreground}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+[module/mpd]
+type = internal/mpd
+
+;format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+label-song = 𝄞 %artist% - %title%
+
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-consume = ✀
+
+
+host = 127.0.0.1
+port = 6600
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 2
+
+[module/powermenu]
+type = custom/menu
+
+label-open = 
+label-close = 
+label-separator = " | "
+label-separator-margin = 3
+
+menu-0-0 = Reboot
+menu-0-0-foreground = ${colors.accent}
+menu-0-0-exec = menu-open-1
+menu-0-1 = Power off
+menu-0-1-foreground = ${colors.accent}
+menu-0-1-exec = menu-open-2
+menu-0-2 = Lock
+menu-0-2-foreground = ${colors.accent}
+menu-0-2-exec = i3lock-fancy
+
+menu-1-0 = Cancel
+menu-1-0-foreground = ${colors.accent}
+menu-1-0-exec = menu-open-0
+menu-1-1 = Reboot
+menu-1-1-foreground = ${colors.accent}
+menu-1-1-exec = reboot
+
+menu-2-0 = Power off
+menu-2-0-foreground = ${colors.accent}
+menu-2-0-exec = shutdown -h now
+menu-2-1 = Cancel
+menu-2-1-foreground = ${colors.accent}
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
