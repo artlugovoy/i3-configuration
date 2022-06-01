@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Terminus (TTF) 10
+font pango:Terminus 10
 client.focused          #E9E9E9 #E9E9E9	#bbbbbb	#648ECE             ##2575EE
 client.focused_inactive	#E9E9E9 #E9E9E9 #bbbbbb #104090
 client.unfocused        #E9E9E9 #E9E9E9	#bbbbbb	#AF2010
@@ -17,7 +17,7 @@ bindsym $mod+Return exec sakura
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run -fn 'Terminus (TTF):pixelsize=14:pixelsize=14' -nb '#E9E9E9' -nf '#648ECE'
+bindsym $mod+p exec dmenu_run -fn 'Terminus:pixelsize=16' -nb '#E9E9E9' -nf '#6C6766'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktofile. It is a wrapper around dmenu, so you need that
 # installed.
@@ -174,7 +174,7 @@ bindsym $mod+c exec chromium
 bindsym $mod+g exec sakura -e vim
 bindsym $mod+t exec pcmanfm
 
-exec_always --no-startup-id $HOME/.i3/polybar/runner.sh
+exec_always --no-startup-id $HOME/.config/i3/polybar/runner.sh
 
 # System Commands
 set $Locker i3lock-fancy && sleep 1
