@@ -38,7 +38,7 @@ font-4 = "Font Awesome 6 Brands:style=Regular:pixelsize=8;1"
 
 modules-left =  i3
 modules-center = xwindow
-modules-right = xkeyboard volume powermenu date
+modules-right = mpd xkeyboard volume powermenu date
 
 tray-position = right
 tray-padding = 3
@@ -304,10 +304,11 @@ ramp-foreground = ${colors.foreground}
 [module/mpd]
 type = internal/mpd
 
-;format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-online = <icon-prev> <icon-seekb> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <label-time>  <label-song>
+
 label-song = 𝄞 %artist% - %title%
 
-icon-play = ⏵
+icon-play = p
 icon-pause = ⏸
 icon-stop = ⏹
 icon-prev = ⏮
@@ -318,7 +319,6 @@ icon-random = 🔀
 icon-repeat = 🔁
 icon-repeatone = 🔂
 icon-consume = ✀
-
 
 host = 127.0.0.1
 port = 6600
