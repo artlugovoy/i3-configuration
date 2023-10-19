@@ -11,7 +11,8 @@ client.urgent           #E9E9E9 #FF4020 #bbbbbb #FFFF00
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec sakura
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -170,7 +171,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 #Keys to run apps
-bindsym $mod+c exec chromium
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+g exec sakura -e vim
 bindsym $mod+t exec pcmanfm
 
