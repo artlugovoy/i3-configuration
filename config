@@ -172,7 +172,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 #Keys to run apps
 bindsym $mod+c exec google-chrome-stable
-bindsym $mod+g exec sakura -e vim
+bindsym $mod+b exec firefox
 bindsym $mod+t exec pcmanfm
 
 exec_always --no-startup-id $HOME/.config/i3/polybar/runner.sh
