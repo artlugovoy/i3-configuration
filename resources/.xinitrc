@@ -4,7 +4,7 @@ xsetroot -cursor_name left_ptr
 setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,ru
 xbindkeys &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources &
-feh --bg-scale '/home/arthur/.config/i3/resources/images/bg3.jpg' &
+feh --bg-scale '/home/arthur/.config/i3/resources/images/bg.png' &
 compton --config ~/.config/i3/resources/.compton.conf &
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
 udiskie -2 &
