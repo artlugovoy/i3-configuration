@@ -18,7 +18,7 @@ bindsym $mod+Shift+Return exec sakura
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run -fn 'Terminus:pixelsize=16' -nb '#E9E9E9' -nf '#6C6766'
+bindsym $mod+p exec j4-dmenu-desktop --dmenu="dmenu -i -fn 'Terminus:pixelsize=16' -nb '#E9E9E9' -nf '#6C6766' -sb '#6C6766' -sf '#E9E9E9'"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktofile. It is a wrapper around dmenu, so you need that
 # installed.
@@ -171,8 +171,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 #Keys to run apps
-bindsym $mod+c exec google-chrome-stable
-bindsym $mod+b exec firefox
+bindsym $mod+b exec google-chrome-stable
+bindsym $mod+c exec firefox
 bindsym $mod+t exec pcmanfm
 
 exec_always --no-startup-id $HOME/.config/i3/polybar/runner.sh
