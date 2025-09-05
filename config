@@ -1,7 +1,7 @@
 set $mod Mod4
 
 font pango:Terminus 10
-client.focused          #E9E9E9 #E9E9E9	#bbbbbb	#648ECE             ##2575EE
+client.focused          #E9E9E9 #E9E9E9	#bbbbbb	#648ECE
 client.focused_inactive	#E9E9E9 #E9E9E9 #bbbbbb #104090
 client.unfocused        #E9E9E9 #E9E9E9	#bbbbbb	#AF2010
 client.urgent           #E9E9E9 #FF4020 #bbbbbb #FFFF00
@@ -18,15 +18,15 @@ bindsym $mod+Shift+Return exec sakura
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec j4-dmenu-desktop --dmenu="dmenu -i -fn 'Terminus:pixelsize=16' -nb '#E9E9E9' -nf '#6C6766' -sb '#6C6766' -sf '#E9E9E9'"
+bindsym $mod+p exec j4-dmenu-desktop --dmenu="dmenu -i -fn 'Terminus:pixelsize=14' -nb '#E9E9E9' -nf '#6C6766' -sb '#6C6766' -sf '#E9E9E9'"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktofile. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 
-new_window 1pixel
-new_float none
+default_border pixel 1
+default_floating_border none
 for_window [class="^.*"] border none
 for_window [class="Wine"] floating enable
 

@@ -11,9 +11,6 @@ udiskie -2 &
 dunst &
 exec imwheel -b 45 &
 (sleep 5; conky -c ~/.config/i3/conky/desktop.conf -q) &
-pasystray &
-nm-applet &
-openvpn3-indicator &
 exec dbus-launch --exit-with-session --sh-syntax i3 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh) &

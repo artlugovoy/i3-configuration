@@ -15,7 +15,7 @@ foreground = ${colors.foreground}
 
 
 line-color = ${colors.linecolor}
-separator = "  |   "
+separator = " |  "
 underline-size = 1
 overline-size = 2
 
@@ -32,13 +32,13 @@ module-margin-right = 2
 
 font-0 = "Terminus:pixelsize=8;1"
 font-1 = "Terminus:pixelsize=10;0"
-font-2 = "Font Awesome 6 Free:style=Regular:pixelsize=8;1"
-font-3 = "Font Awesome 6 Free:style=Solid:pixelsize=8;1"
-font-4 = "Font Awesome 6 Brands:style=Regular:pixelsize=8;1"
+font-2 = "Font Awesome 7 Free:style=Regular:pixelsize=8;1"
+font-3 = "Font Awesome 7 Free:style=Solid:pixelsize=8;1"
+font-4 = "Font Awesome 7 Brands:style=Regular:pixelsize=8;1"
 
 modules-left =  i3
 modules-center = xwindow
-modules-right = mpd xkeyboard volume powermenu date
+modules-right = eth cpu mpd powermenu xkeyboard volumedate
 
 tray-position = right
 tray-padding = 3
@@ -198,9 +198,8 @@ label-visible-padding = ${module/bspwm.label-empty-padding}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix =  
+format-prefix = " " 
 format-prefix-foreground = ${colors.foreground}
-format-underline = #f90000
 label = %percentage%%
 
 [module/memory]
@@ -239,7 +238,7 @@ interval = 3.0
 
 format-connected-prefix = " "
 format-connected-prefix-foreground = #666
-label-connected = %local_ip%
+label-connected = up: %upspeed% // dl: %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
