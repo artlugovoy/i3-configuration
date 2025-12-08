@@ -38,7 +38,7 @@ font-4 = "Font Awesome 7 Brands:style=Regular:pixelsize=8;1"
 
 modules-left =  i3
 modules-center = xwindow
-modules-right = eth cpu mpd powermenu xkeyboard volumedate
+modules-right = eth cpu mpdvolume volume xkeyboard powermenu date
 
 tray-position = right
 tray-padding = 3
